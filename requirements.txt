@@ -1,0 +1,5 @@
+typesense
+sentence-transformers
+openai
+flask
+pypdf
