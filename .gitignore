@@ -10,4 +10,15 @@ typesense-data/
 
 # OS files
 .DS_Store
- init
+
+# Ignore everything by default
+*
+
+# Allow these files
+!requirements.txt
+!typesense_rag.py
+!.gitignore
+!doc/
+
+# Allow files inside doc
+!doc/**
