@@ -12,8 +12,7 @@ client = typesense.Client({
   }],
   "api_key": "xyz",
   "connection_timeout_seconds": 2
-})
-
+}) 
 schema = {
   "name": "docs",
   "fields": [
@@ -53,6 +52,7 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def embed(text):
+    print("Embeded Query :",model.encode(text).tolist())
     return model.encode(text).tolist()
 
 
@@ -110,8 +110,6 @@ Question:
 Answer clearly and concisely.
 """
 
-
-
 llm = ChatNVIDIA(
     model="openai/gpt-oss-20b",
     api_key=os.getenv("OPENAI_API_KEY"),
@@ -133,5 +131,3 @@ if __name__ == "__main__":
     answer = rag(query)
     print("RESPONSE :\n")
     print(answer)
-
-

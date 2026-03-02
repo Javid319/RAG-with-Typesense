@@ -17,6 +17,7 @@ typesense-data/
 # Allow these files
 !requirements.txt
 !typesense_rag.py
+!r5.py
 !.gitignore
 !doc/
 
